@@ -111,7 +111,7 @@ body{
 .app{
     height: 75vh;
     width: 100%;
-    background: linear-gradient(to top, #0b0b0b,#222);
+    background: linear-gradient(to top, #0b0b0b,#060a27);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -131,25 +131,78 @@ body{
 .app__download p{
     font-size: 1.4rem;
 }
-footer{
+/*Style footer*/
+.footer{
     background:#222;
-    padding: 20px 0px;
+    padding: 4rem 0px 2rem;
 }
-footer h5{
+.footer h5{
     color: #fff;
     font-size: 1.2rem;
 }
 footer p{
     color: #aeaeb1;
 }
-/*section payment*/
-.payment{
-    height: 75vh;
+.footer__links{
+    list-style: none;
+}
+.footer__link{
+    color: #e30813;
+    text-decoration: none;
+}
+.footer__link a{
+    text-decoration: none;
+}
+/*Style netflix accounts*/
+.netflix__accounts{
+    height: auto;
+    padding: 4rem 0;
     width: 100%;
-    background: linear-gradient(to left, #0b0b0b,#222);
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #222;
+}
+.netflix__content{
+    color: #f4f4f8;
+}
+.netflix__content h2{
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+
+}
+.netflix__accounts span{
+    color: #e30813;
+    text-transform: uppercase;
+}
+.netflix__content p{
+    font-size: 1.4rem;
+}
+/*section payment*/
+.payment{
+    position: relative;
+    height: 75vh;
+    width: 100%;
+    background: url('../imagenes/payment.jpg');
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+.payment::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: #222;
+    z-index: -1;
+    opacity: 0.6;
 }
 .payment__content{
     color: #f4f4f8;
@@ -161,9 +214,43 @@ footer p{
 .payment__content p{
     font-size: 1.4rem;
 }
+/*Lista de redes sociales*/
+.list__redes{
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 99;
+}
+.redes__icons{
+    position: relative;
+}
+.redes__icon{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    transition: all 0.3s ease;
+}
+.redes__icon:nth-child(1){
+    background-color: #fff;
+}
+.redes__icon:nth-child(2){
+    background-color: #fff;
+}
+.redes__icon:hover{
+    transform: scale(1.2);
+}
 @media screen and (max-width: 576px){
+    /*General style*/
+    .btn{
+        width: 100%;
+    }
+    /*Style header*/
     .header__title h1{
-        font-size: 2rem;
+        font-size: 3rem;
     }
     .header__description p{
         font-size: 16px;
@@ -172,21 +259,45 @@ footer p{
         width: 100%;
     }
     .payment__content-img img{
-        height: 140px;   
+        height: 290px;   
     }
     /*app*/
     .app{
         height: 100%;
         padding: 20px 0px;
     }
-    /*section app*/
+    /*style app download*/
+    .app{
+        height: auto;
+        padding: 4rem 0px;
+    }
+    .app__download{
+        padding-top: 1rem;
+    }
     .app__download h2{
         font-size: 2rem;
     }
     .app__download p{
         font-size: 16px;
     }
-    /*Service content*/
+    /*Style netflix account*/
+    .netflix__img-desktop{
+        display: none;
+    }
+    .netflix__img{
+        text-align: center;
+    }
+    .netflix__content h2{
+        font-size: 2rem;
+    }
+    .netflix__content p{
+        font-size: 16px;
+    }
+    /*Service style*/
+    .service{
+        height: auto;
+        padding: 4rem 0px;
+    }
     .service__content h2{
         font-size: 2rem;
     }
@@ -194,6 +305,10 @@ footer p{
         font-size: 16px;
     }
     /*Section payment*/
+    .payment{
+        height: auto;
+        padding: 4rem 0px;
+    }
     .payment__content h2{
         font-size: 2rem;
     }
