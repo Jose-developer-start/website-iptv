@@ -64,6 +64,10 @@ body{
     justify-content: center;
     align-items: center;
 }
+.header__content img{
+    height: 250px;
+    margin-bottom: 1rem;
+}
 .header__title h1{
     font-size: 3.5rem;
     color: #fff;
@@ -140,8 +144,8 @@ body{
     color: #fff;
     font-size: 1.2rem;
 }
-footer p{
-    color: #aeaeb1;
+footer p,.text-light{
+    color: #aeaeb1 !important;
 }
 .footer__links{
     list-style: none;
@@ -251,6 +255,7 @@ footer p{
     /*Style header*/
     .header__title h1{
         font-size: 3rem;
+        margin-top: 1rem;
     }
     .header__description p{
         font-size: 16px;
