@@ -11,7 +11,6 @@ body{
     font-family: 'Poppins' !important;
 }
 .header{
-    background-image: url('../imagenes/banner/iptv_banner.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -21,6 +20,14 @@ body{
     width: 100%;
     position: relative;
     z-index: 1;
+}
+.header .video-banner{
+    position: absolute;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    padding-top: 60px;
+    background-color: rgba(0, 0, 0, 0.8);
 }
 .header::before{
     content: '';
@@ -165,13 +172,13 @@ footer p,.text-light{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #222;
+    background-color: #000000;
 }
 .netflix__content{
     color: #f4f4f8;
 }
 .netflix__content h2{
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     margin-bottom: 30px;
 
 }
@@ -180,12 +187,12 @@ footer p,.text-light{
     text-transform: uppercase;
 }
 .netflix__content p{
-    font-size: 1.4rem;
+    font-size: 16px;
 }
 /*section payment*/
 .payment{
     position: relative;
-    height: 75vh;
+    height: 70vh;
     width: 100%;
     background: url('../imagenes/payment.jpg');
     background-position: center;
